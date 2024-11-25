@@ -1,8 +1,14 @@
 import 'package:flutter/rendering.dart';
 
 class Ingredient {
-  const Ingredient(this.image, this.positions);
+  const Ingredient(
+    this.image,
+    this.imageUnit,
+    this.positions,
+  );
+
   final String image;
+  final String imageUnit;
   final List<Offset> positions;
 
   bool compare(Ingredient ingredient) => ingredient.image == image;
@@ -11,6 +17,7 @@ class Ingredient {
 final ingredients = const <Ingredient>[
   Ingredient(
     'lib/images/chili.png',
+    'lib/images/chili_unit.png',
     <Offset>[
       Offset(0.2, 0.2),
       Offset(0.6, 0.2),
@@ -20,7 +27,8 @@ final ingredients = const <Ingredient>[
     ],
   ),
   Ingredient(
-    'lib/images/garlic.png',
+    'lib/images/mushroom.png',
+    'lib/images/mushroom_unit.png',
     <Offset>[
       Offset(0.2, 0.35),
       Offset(0.65, 0.35),
@@ -31,15 +39,17 @@ final ingredients = const <Ingredient>[
   ),
   Ingredient(
     'lib/images/olive.png',
+    'lib/images/olive_unit.png',
     <Offset>[
       Offset(0.25, 0.5),
-      Offset(0.65, 0.6),
+      Offset(0.4, 0.4),
       Offset(0.2, 0.3),
       Offset(0.4, 0.2),
-      Offset(0.2, 0.6),
+      Offset(0.2, 0.45),
     ],
   ),
   Ingredient(
+    'lib/images/onion.png',
     'lib/images/onion.png',
     <Offset>[
       Offset(0.2, 0.65),
@@ -51,6 +61,7 @@ final ingredients = const <Ingredient>[
   ),
   Ingredient(
     'lib/images/pea.png',
+    'lib/images/pea_unit.png',
     <Offset>[
       Offset(0.2, 0.35),
       Offset(0.65, 0.35),
@@ -61,6 +72,7 @@ final ingredients = const <Ingredient>[
   ),
   Ingredient(
     'lib/images/pickle.png',
+    'lib/images/pickle_unit.png',
     <Offset>[
       Offset(0.2, 0.65),
       Offset(0.65, 0.3),
@@ -71,6 +83,7 @@ final ingredients = const <Ingredient>[
   ),
   Ingredient(
     'lib/images/potato.png',
+    'lib/images/potato_unit.png',
     <Offset>[
       Offset(0.2, 0.2),
       Offset(0.6, 0.2),
